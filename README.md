@@ -1,20 +1,25 @@
 ## IP Name ##
 
-**IP Name** is a insert description of IP
+**Auto-undeploy Workspace Service** is a simple service that allows the VeriStand gateway to undeploy the current Definition File when a user closes the workspace window.
 
 ### LabVIEW Version ###
 
-Describe the LabVIEW version used to develop this source
+LabVIEW 2016 & Later
 
-### Built Availability ###
-
-Describe the availability, or lack of availability of built versions of this IP and provide any links needed to go get builds
 
 ### Quality, Limitations ###
 
-Describe the maturity of the IP. Is this in use worldwide? Is this terrible code that needs lots of updates? Is this a work in progress?
+The provided code is as is. It has not been extensively tested and requires validation before implementing it in a real-world use case.
 
-Describe any limitations of the IP.
+### Installation Guide ###
+
+Open the LabVIEW project, and build the source distribution. That will create a <Builds> directory next to the project. You may copy the content of this folder next to your VeriStand project
+Open your VeriStand project.
+Right-Click on the **Services** item, and select Configure.
+Press New. Search for the Auto Undeploy Workspace Service.vi VI that was built in the <Builds> folder. Press OK twice.
+
+Run your VeriStand project. If a user proceeds to a click to close the workspace window, the definition file should undeploy in the next seconds.
+Follow the steps above for every VeriStand project you would like to apply this "Undeploy-on-Workspace-Close" feature.
 
 ### Dependencies ###
 
